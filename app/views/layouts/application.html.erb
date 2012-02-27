@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Migrareg</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Edit Profile", edit_user_path(:current) %> |
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Register", new_user_path %> |
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
