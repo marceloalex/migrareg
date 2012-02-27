@@ -1,0 +1,23 @@
+<h1>Listing type_customers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @type_customers.each do |type_customer| %>
+  <tr>
+    <td><%= type_customer.name %></td>
+    <td><%= link_to 'Show', type_customer %></td>
+    <td><%= link_to 'Edit', edit_type_customer_path(type_customer) %></td>
+    <td><%= link_to 'Destroy', type_customer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Type customer', new_type_customer_path %>

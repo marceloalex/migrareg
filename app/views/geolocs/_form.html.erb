@@ -1,0 +1,45 @@
+<%= form_for(@geoloc) do |f| %>
+  <% if @geoloc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@geoloc.errors.count, "error") %> prohibited this geoloc from being saved:</h2>
+
+      <ul>
+      <% @geoloc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code_geoloc %><br />
+    <%= f.text_field :code_geoloc %>
+  </div>
+  <div class="field">
+    <%= f.label :code_departament %><br />
+    <%= f.text_field :code_departament %>
+  </div>
+  <div class="field">
+    <%= f.label :code_province %><br />
+    <%= f.text_field :code_province %>
+  </div>
+  <div class="field">
+    <%= f.label :code_district %><br />
+    <%= f.text_field :code_district %>
+  </div>
+  <div class="field">
+    <%= f.label :departament %><br />
+    <%= f.text_field :departament %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br />
+    <%= f.text_field :province %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

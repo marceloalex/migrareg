@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @current_package.name %>
+</p>
+
+<p>
+  <b>Current line:</b>
+  <%= @current_package.current_line %>
+</p>
+
+<p>
+  <b>Current speedy:</b>
+  <%= @current_package.current_speedy %>
+</p>
+
+<p>
+  <b>Current wire:</b>
+  <%= @current_package.current_wire %>
+</p>
+
+
+<%= link_to 'Edit', edit_current_package_path(@current_package) %> |
+<%= link_to 'Back', current_packages_path %>

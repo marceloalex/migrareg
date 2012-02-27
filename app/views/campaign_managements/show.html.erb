@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Wallet:</b>
+  <%= @campaign_management.wallet %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @campaign_management.customer %>
+</p>
+
+<p>
+  <b>Campaig:</b>
+  <%= @campaign_management.campaig %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaign_management_path(@campaign_management) %> |
+<%= link_to 'Back', campaign_managements_path %>

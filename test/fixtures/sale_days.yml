@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wallet: 
+  customer: 
+  hour: 2012-02-27 15:49:37
+  user: 
+
+two:
+  wallet: 
+  customer: 
+  hour: 2012-02-27 15:49:37
+  user: 

@@ -1,0 +1,31 @@
+<h1>Listing temporal_managements</h1>
+
+<table>
+  <tr>
+    <th>Management</th>
+    <th>Date call</th>
+    <th>Management status</th>
+    <th>Hour call</th>
+    <th>Number call</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @temporal_managements.each do |temporal_management| %>
+  <tr>
+    <td><%= temporal_management.management %></td>
+    <td><%= temporal_management.date_call %></td>
+    <td><%= temporal_management.management_status %></td>
+    <td><%= temporal_management.hour_call %></td>
+    <td><%= temporal_management.number_call %></td>
+    <td><%= link_to 'Show', temporal_management %></td>
+    <td><%= link_to 'Edit', edit_temporal_management_path(temporal_management) %></td>
+    <td><%= link_to 'Destroy', temporal_management, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Temporal management', new_temporal_management_path %>

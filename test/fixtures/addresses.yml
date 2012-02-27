@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyString
+  customer: 
+  type_address: 
+  motive: MyString
+  status: false
+  disable_date: 2012-02-27 15:42:35
+  geoloc: 
+
+two:
+  address: MyString
+  customer: 
+  type_address: 
+  motive: MyString
+  status: false
+  disable_date: 2012-02-27 15:42:35
+  geoloc: 

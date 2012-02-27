@@ -1,0 +1,35 @@
+<h1>Listing geolocs</h1>
+
+<table>
+  <tr>
+    <th>Code geoloc</th>
+    <th>Code departament</th>
+    <th>Code province</th>
+    <th>Code district</th>
+    <th>Departament</th>
+    <th>Province</th>
+    <th>District</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @geolocs.each do |geoloc| %>
+  <tr>
+    <td><%= geoloc.code_geoloc %></td>
+    <td><%= geoloc.code_departament %></td>
+    <td><%= geoloc.code_province %></td>
+    <td><%= geoloc.code_district %></td>
+    <td><%= geoloc.departament %></td>
+    <td><%= geoloc.province %></td>
+    <td><%= geoloc.district %></td>
+    <td><%= link_to 'Show', geoloc %></td>
+    <td><%= link_to 'Edit', edit_geoloc_path(geoloc) %></td>
+    <td><%= link_to 'Destroy', geoloc, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Geoloc', new_geoloc_path %>

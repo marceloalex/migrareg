@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Phone:</b>
+  <%= @phone.phone %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @phone.customer %>
+</p>
+
+<p>
+  <b>Type phone:</b>
+  <%= @phone.type_phone %>
+</p>
+
+<p>
+  <b>Motive:</b>
+  <%= @phone.motive %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @phone.status %>
+</p>
+
+<p>
+  <b>Disable date:</b>
+  <%= @phone.disable_date %>
+</p>
+
+<p>
+  <b>Geoloc:</b>
+  <%= @phone.geoloc %>
+</p>
+
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>

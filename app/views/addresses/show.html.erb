@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @address.address %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @address.customer %>
+</p>
+
+<p>
+  <b>Type address:</b>
+  <%= @address.type_address %>
+</p>
+
+<p>
+  <b>Motive:</b>
+  <%= @address.motive %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @address.status %>
+</p>
+
+<p>
+  <b>Disable date:</b>
+  <%= @address.disable_date %>
+</p>
+
+<p>
+  <b>Geoloc:</b>
+  <%= @address.geoloc %>
+</p>
+
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>

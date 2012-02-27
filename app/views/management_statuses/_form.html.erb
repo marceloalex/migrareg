@@ -1,0 +1,53 @@
+<%= form_for(@management_status) do |f| %>
+  <% if @management_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@management_status.errors.count, "error") %> prohibited this management_status from being saved:</h2>
+
+      <ul>
+      <% @management_status.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_response %><br />
+    <%= f.text_field :type_response %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br />
+    <%= f.text_field :response %>
+  </div>
+  <div class="field">
+    <%= f.label :detail_response %><br />
+    <%= f.text_field :detail_response %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br />
+    <%= f.text_field :observation %>
+  </div>
+  <div class="field">
+    <%= f.label :quailification %><br />
+    <%= f.text_field :quailification %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :code_telephony %><br />
+    <%= f.text_field :code_telephony %>
+  </div>
+  <div class="field">
+    <%= f.label :code_motive %><br />
+    <%= f.text_field :code_motive %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.check_box :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

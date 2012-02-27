@@ -1,0 +1,29 @@
+<h1>Listing sale_days</h1>
+
+<table>
+  <tr>
+    <th>Wallet</th>
+    <th>Customer</th>
+    <th>Hour</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sale_days.each do |sale_day| %>
+  <tr>
+    <td><%= sale_day.wallet %></td>
+    <td><%= sale_day.customer %></td>
+    <td><%= sale_day.hour %></td>
+    <td><%= sale_day.user %></td>
+    <td><%= link_to 'Show', sale_day %></td>
+    <td><%= link_to 'Edit', edit_sale_day_path(sale_day) %></td>
+    <td><%= link_to 'Destroy', sale_day, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale day', new_sale_day_path %>

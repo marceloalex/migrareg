@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  management: 
+  date_call: 2012-02-27 15:46:56
+  management_status: 
+  hour_call: 2012-02-27 15:46:56
+  number_call: 
+
+two:
+  management: 
+  date_call: 2012-02-27 15:46:56
+  management_status: 
+  hour_call: 2012-02-27 15:46:56
+  number_call: 

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Wallet:</b>
+  <%= @sale_day.wallet %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @sale_day.customer %>
+</p>
+
+<p>
+  <b>Hour:</b>
+  <%= @sale_day.hour %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @sale_day.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_day_path(@sale_day) %> |
+<%= link_to 'Back', sale_days_path %>

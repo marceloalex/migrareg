@@ -1,0 +1,49 @@
+<%= form_for(@sale_day_total) do |f| %>
+  <% if @sale_day_total.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale_day_total.errors.count, "error") %> prohibited this sale_day_total from being saved:</h2>
+
+      <ul>
+      <% @sale_day_total.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hour %><br />
+    <%= f.datetime_select :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :wallet %><br />
+    <%= f.text_field :wallet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :validation %><br />
+    <%= f.text_field :validation %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br />
+    <%= f.text_field :observation %>
+  </div>
+  <div class="field">
+    <%= f.label :user_validator %><br />
+    <%= f.text_field :user_validator %>
+  </div>
+  <div class="field">
+    <%= f.label :hour_validator %><br />
+    <%= f.datetime_select :hour_validator %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wallet: 
+  customer: 
+  code_plan_product: MyString
+  money: MyString
+  status: false
+  segment: MyString
+  current_package: 
+  cycle: MyString
+  mark: MyString
+  business: 
+  rank: 
+
+two:
+  wallet: 
+  customer: 
+  code_plan_product: MyString
+  money: MyString
+  status: false
+  segment: MyString
+  current_package: 
+  cycle: MyString
+  mark: MyString
+  business: 
+  rank: 

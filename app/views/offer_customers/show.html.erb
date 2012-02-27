@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @offer_customer.customer %>
+</p>
+
+<p>
+  <b>Wallet:</b>
+  <%= @offer_customer.wallet %>
+</p>
+
+<p>
+  <b>Offer:</b>
+  <%= @offer_customer.offer %>
+</p>
+
+<p>
+  <b>Promotion:</b>
+  <%= @offer_customer.promotion %>
+</p>
+
+
+<%= link_to 'Edit', edit_offer_customer_path(@offer_customer) %> |
+<%= link_to 'Back', offer_customers_path %>

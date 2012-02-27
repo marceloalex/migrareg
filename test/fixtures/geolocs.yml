@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code_geoloc: MyString
+  code_departament: MyString
+  code_province: MyString
+  code_district: MyString
+  departament: MyString
+  province: MyString
+  district: MyString
+
+two:
+  code_geoloc: MyString
+  code_departament: MyString
+  code_province: MyString
+  code_district: MyString
+  departament: MyString
+  province: MyString
+  district: MyString

@@ -1,0 +1,53 @@
+<%= form_for(@offer) do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+
+      <ul>
+      <% @offer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :clasification %><br />
+    <%= f.text_field :clasification %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br />
+    <%= f.text_field :detail %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br />
+    <%= f.text_field :response %>
+  </div>
+  <div class="field">
+    <%= f.label :code_offer %><br />
+    <%= f.text_field :code_offer %>
+  </div>
+  <div class="field">
+    <%= f.label :line_destiny %><br />
+    <%= f.text_field :line_destiny %>
+  </div>
+  <div class="field">
+    <%= f.label :speedy_destiny %><br />
+    <%= f.text_field :speedy_destiny %>
+  </div>
+  <div class="field">
+    <%= f.label :wire_destiny %><br />
+    <%= f.text_field :wire_destiny %>
+  </div>
+  <div class="field">
+    <%= f.label :auxiliar %><br />
+    <%= f.text_field :auxiliar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

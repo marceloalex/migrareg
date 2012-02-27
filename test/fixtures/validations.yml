@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wallet: 
+  customer: 
+  user: 
+  date_sale: 2012-02-27 15:49:23
+  hour_sale: 2012-02-27 15:49:23
+  user_validator: MyString
+  hour_validator: 2012-02-27 15:49:23
+  observation: MyString
+  status: 1
+  Flag: false
+  line_destiny: MyString
+  speedy_destiny: MyString
+  cable_destiny: MyString
+
+two:
+  wallet: 
+  customer: 
+  user: 
+  date_sale: 2012-02-27 15:49:23
+  hour_sale: 2012-02-27 15:49:23
+  user_validator: MyString
+  hour_validator: 2012-02-27 15:49:23
+  observation: MyString
+  status: 1
+  Flag: false
+  line_destiny: MyString
+  speedy_destiny: MyString
+  cable_destiny: MyString

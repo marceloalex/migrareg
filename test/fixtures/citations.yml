@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  management: 
+  day: 2012-02-27 15:48:05
+  user: 
+  hour: 2012-02-27 15:48:05
+  name: MyString
+  phone: MyString
+
+two:
+  management: 
+  day: 2012-02-27 15:48:05
+  user: 
+  hour: 2012-02-27 15:48:05
+  name: MyString
+  phone: MyString

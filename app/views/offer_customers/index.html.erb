@@ -1,0 +1,29 @@
+<h1>Listing offer_customers</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Wallet</th>
+    <th>Offer</th>
+    <th>Promotion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @offer_customers.each do |offer_customer| %>
+  <tr>
+    <td><%= offer_customer.customer %></td>
+    <td><%= offer_customer.wallet %></td>
+    <td><%= offer_customer.offer %></td>
+    <td><%= offer_customer.promotion %></td>
+    <td><%= link_to 'Show', offer_customer %></td>
+    <td><%= link_to 'Edit', edit_offer_customer_path(offer_customer) %></td>
+    <td><%= link_to 'Destroy', offer_customer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Offer customer', new_offer_customer_path %>

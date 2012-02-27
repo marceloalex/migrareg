@@ -1,0 +1,2 @@
+module AuxiliarManagementsHelper
+end

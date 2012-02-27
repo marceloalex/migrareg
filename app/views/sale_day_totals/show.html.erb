@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hour:</b>
+  <%= @sale_day_total.hour %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @sale_day_total.user %>
+</p>
+
+<p>
+  <b>Wallet:</b>
+  <%= @sale_day_total.wallet %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @sale_day_total.customer %>
+</p>
+
+<p>
+  <b>Validation:</b>
+  <%= @sale_day_total.validation %>
+</p>
+
+<p>
+  <b>Observation:</b>
+  <%= @sale_day_total.observation %>
+</p>
+
+<p>
+  <b>User validator:</b>
+  <%= @sale_day_total.user_validator %>
+</p>
+
+<p>
+  <b>Hour validator:</b>
+  <%= @sale_day_total.hour_validator %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_day_total_path(@sale_day_total) %> |
+<%= link_to 'Back', sale_day_totals_path %>

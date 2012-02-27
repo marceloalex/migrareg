@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @offer.name %>
+</p>
+
+<p>
+  <b>Clasification:</b>
+  <%= @offer.clasification %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @offer.detail %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%= @offer.response %>
+</p>
+
+<p>
+  <b>Code offer:</b>
+  <%= @offer.code_offer %>
+</p>
+
+<p>
+  <b>Line destiny:</b>
+  <%= @offer.line_destiny %>
+</p>
+
+<p>
+  <b>Speedy destiny:</b>
+  <%= @offer.speedy_destiny %>
+</p>
+
+<p>
+  <b>Wire destiny:</b>
+  <%= @offer.wire_destiny %>
+</p>
+
+<p>
+  <b>Auxiliar:</b>
+  <%= @offer.auxiliar %>
+</p>
+
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

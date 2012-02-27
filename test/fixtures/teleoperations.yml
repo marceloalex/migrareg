@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number_call: 
+  wallet: 
+  customer: 
+  management_status: 
+  user: 
+  quota: MyString
+  date_management: 2012-02-27 15:47:46
+  hour_management: 2012-02-27 15:47:46
+  observation: MyString
+  status: false
+  duration_call: 1
+  name_responsible: MyString
+  offer: 
+  dni: MyString
+  ruc: MyString
+  reference_phone: MyString
+  relationship: MyString
+  ce: MyString
+  domain: MyString
+  nonel: MyString
+
+two:
+  number_call: 
+  wallet: 
+  customer: 
+  management_status: 
+  user: 
+  quota: MyString
+  date_management: 2012-02-27 15:47:46
+  hour_management: 2012-02-27 15:47:46
+  observation: MyString
+  status: false
+  duration_call: 1
+  name_responsible: MyString
+  offer: 
+  dni: MyString
+  ruc: MyString
+  reference_phone: MyString
+  relationship: MyString
+  ce: MyString
+  domain: MyString
+  nonel: MyString

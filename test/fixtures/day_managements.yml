@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2012-02-27 15:46:27
+  user: 
+  number_management: 1
+
+two:
+  date: 2012-02-27 15:46:27
+  user: 
+  number_management: 1

@@ -1,0 +1,23 @@
+<h1>Listing type_phones</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @type_phones.each do |type_phone| %>
+  <tr>
+    <td><%= type_phone.name %></td>
+    <td><%= link_to 'Show', type_phone %></td>
+    <td><%= link_to 'Edit', edit_type_phone_path(type_phone) %></td>
+    <td><%= link_to 'Destroy', type_phone, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Type phone', new_type_phone_path %>

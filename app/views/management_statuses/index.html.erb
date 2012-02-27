@@ -1,0 +1,39 @@
+<h1>Listing management_statuses</h1>
+
+<table>
+  <tr>
+    <th>Type response</th>
+    <th>Response</th>
+    <th>Detail response</th>
+    <th>Observation</th>
+    <th>Quailification</th>
+    <th>Contact</th>
+    <th>Code telephony</th>
+    <th>Code motive</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @management_statuses.each do |management_status| %>
+  <tr>
+    <td><%= management_status.type_response %></td>
+    <td><%= management_status.response %></td>
+    <td><%= management_status.detail_response %></td>
+    <td><%= management_status.observation %></td>
+    <td><%= management_status.quailification %></td>
+    <td><%= management_status.contact %></td>
+    <td><%= management_status.code_telephony %></td>
+    <td><%= management_status.code_motive %></td>
+    <td><%= management_status.status %></td>
+    <td><%= link_to 'Show', management_status %></td>
+    <td><%= link_to 'Edit', edit_management_status_path(management_status) %></td>
+    <td><%= link_to 'Destroy', management_status, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Management status', new_management_status_path %>

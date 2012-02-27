@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code geoloc:</b>
+  <%= @geoloc.code_geoloc %>
+</p>
+
+<p>
+  <b>Code departament:</b>
+  <%= @geoloc.code_departament %>
+</p>
+
+<p>
+  <b>Code province:</b>
+  <%= @geoloc.code_province %>
+</p>
+
+<p>
+  <b>Code district:</b>
+  <%= @geoloc.code_district %>
+</p>
+
+<p>
+  <b>Departament:</b>
+  <%= @geoloc.departament %>
+</p>
+
+<p>
+  <b>Province:</b>
+  <%= @geoloc.province %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @geoloc.district %>
+</p>
+
+
+<%= link_to 'Edit', edit_geoloc_path(@geoloc) %> |
+<%= link_to 'Back', geolocs_path %>

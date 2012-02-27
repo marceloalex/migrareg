@@ -1,0 +1,69 @@
+<%= form_for(@validation) do |f| %>
+  <% if @validation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@validation.errors.count, "error") %> prohibited this validation from being saved:</h2>
+
+      <ul>
+      <% @validation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wallet %><br />
+    <%= f.text_field :wallet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :date_sale %><br />
+    <%= f.datetime_select :date_sale %>
+  </div>
+  <div class="field">
+    <%= f.label :hour_sale %><br />
+    <%= f.datetime_select :hour_sale %>
+  </div>
+  <div class="field">
+    <%= f.label :user_validator %><br />
+    <%= f.text_field :user_validator %>
+  </div>
+  <div class="field">
+    <%= f.label :hour_validator %><br />
+    <%= f.datetime_select :hour_validator %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br />
+    <%= f.text_field :observation %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :Flag %><br />
+    <%= f.check_box :Flag %>
+  </div>
+  <div class="field">
+    <%= f.label :line_destiny %><br />
+    <%= f.text_field :line_destiny %>
+  </div>
+  <div class="field">
+    <%= f.label :speedy_destiny %><br />
+    <%= f.text_field :speedy_destiny %>
+  </div>
+  <div class="field">
+    <%= f.label :cable_destiny %><br />
+    <%= f.text_field :cable_destiny %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

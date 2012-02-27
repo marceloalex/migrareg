@@ -1,0 +1,61 @@
+<h1>Listing teleoperations</h1>
+
+<table>
+  <tr>
+    <th>Number call</th>
+    <th>Wallet</th>
+    <th>Customer</th>
+    <th>Management status</th>
+    <th>User</th>
+    <th>Quota</th>
+    <th>Date management</th>
+    <th>Hour management</th>
+    <th>Observation</th>
+    <th>Status</th>
+    <th>Duration call</th>
+    <th>Name responsible</th>
+    <th>Offer</th>
+    <th>Dni</th>
+    <th>Ruc</th>
+    <th>Reference phone</th>
+    <th>Relationship</th>
+    <th>Ce</th>
+    <th>Domain</th>
+    <th>Nonel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teleoperations.each do |teleoperation| %>
+  <tr>
+    <td><%= teleoperation.number_call %></td>
+    <td><%= teleoperation.wallet %></td>
+    <td><%= teleoperation.customer %></td>
+    <td><%= teleoperation.management_status %></td>
+    <td><%= teleoperation.user %></td>
+    <td><%= teleoperation.quota %></td>
+    <td><%= teleoperation.date_management %></td>
+    <td><%= teleoperation.hour_management %></td>
+    <td><%= teleoperation.observation %></td>
+    <td><%= teleoperation.status %></td>
+    <td><%= teleoperation.duration_call %></td>
+    <td><%= teleoperation.name_responsible %></td>
+    <td><%= teleoperation.offer %></td>
+    <td><%= teleoperation.dni %></td>
+    <td><%= teleoperation.ruc %></td>
+    <td><%= teleoperation.reference_phone %></td>
+    <td><%= teleoperation.relationship %></td>
+    <td><%= teleoperation.ce %></td>
+    <td><%= teleoperation.domain %></td>
+    <td><%= teleoperation.nonel %></td>
+    <td><%= link_to 'Show', teleoperation %></td>
+    <td><%= link_to 'Edit', edit_teleoperation_path(teleoperation) %></td>
+    <td><%= link_to 'Destroy', teleoperation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Teleoperation', new_teleoperation_path %>

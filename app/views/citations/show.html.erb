@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Management:</b>
+  <%= @citation.management %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @citation.day %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @citation.user %>
+</p>
+
+<p>
+  <b>Hour:</b>
+  <%= @citation.hour %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @citation.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @citation.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_citation_path(@citation) %> |
+<%= link_to 'Back', citations_path %>

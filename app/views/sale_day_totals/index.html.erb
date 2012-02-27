@@ -1,0 +1,37 @@
+<h1>Listing sale_day_totals</h1>
+
+<table>
+  <tr>
+    <th>Hour</th>
+    <th>User</th>
+    <th>Wallet</th>
+    <th>Customer</th>
+    <th>Validation</th>
+    <th>Observation</th>
+    <th>User validator</th>
+    <th>Hour validator</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sale_day_totals.each do |sale_day_total| %>
+  <tr>
+    <td><%= sale_day_total.hour %></td>
+    <td><%= sale_day_total.user %></td>
+    <td><%= sale_day_total.wallet %></td>
+    <td><%= sale_day_total.customer %></td>
+    <td><%= sale_day_total.validation %></td>
+    <td><%= sale_day_total.observation %></td>
+    <td><%= sale_day_total.user_validator %></td>
+    <td><%= sale_day_total.hour_validator %></td>
+    <td><%= link_to 'Show', sale_day_total %></td>
+    <td><%= link_to 'Edit', edit_sale_day_total_path(sale_day_total) %></td>
+    <td><%= link_to 'Destroy', sale_day_total, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale day total', new_sale_day_total_path %>

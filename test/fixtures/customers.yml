@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code_customer: MyString
+  name: MyString
+  Type_customer: 
+  email: MyString
+  geoloc: 
+  incharge: MyString
+  plucking: MyString
+  code_customer: MyString
+  localc: MyString
+  document: MyString
+
+two:
+  code_customer: MyString
+  name: MyString
+  Type_customer: 
+  email: MyString
+  geoloc: 
+  incharge: MyString
+  plucking: MyString
+  code_customer: MyString
+  localc: MyString
+  document: MyString

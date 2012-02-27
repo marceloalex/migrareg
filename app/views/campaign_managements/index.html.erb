@@ -1,0 +1,27 @@
+<h1>Listing campaign_managements</h1>
+
+<table>
+  <tr>
+    <th>Wallet</th>
+    <th>Customer</th>
+    <th>Campaig</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @campaign_managements.each do |campaign_management| %>
+  <tr>
+    <td><%= campaign_management.wallet %></td>
+    <td><%= campaign_management.customer %></td>
+    <td><%= campaign_management.campaig %></td>
+    <td><%= link_to 'Show', campaign_management %></td>
+    <td><%= link_to 'Edit', edit_campaign_management_path(campaign_management) %></td>
+    <td><%= link_to 'Destroy', campaign_management, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Campaign management', new_campaign_management_path %>

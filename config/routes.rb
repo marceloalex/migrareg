@@ -1,4 +1,58 @@
 Migrareg::Application.routes.draw do
+  resources :sale_day_totals
+
+  resources :sale_days
+
+  resources :validations
+
+  resources :campaign_people
+
+  resources :campaign_managements
+
+  resources :campaigns
+
+  resources :citations
+
+  resources :teleoperations
+
+  resources :temporal_managements
+
+  resources :day_managements
+
+  resources :auxiliar_managements
+
+  resources :offer_customers
+
+  resources :managements
+
+  resources :current_packages
+
+  resources :businesses
+
+  resources :ranks
+
+  resources :number_calls
+
+  resources :management_statuses
+
+  resources :offers
+
+  resources :wallets
+
+  resources :phones
+
+  resources :type_phones
+
+  resources :addresses
+
+  resources :type_addresses
+
+  resources :customers
+
+  resources :type_customers
+
+  resources :geolocs
+
   root :to => "portals#index"
   
   match "logout" => "user_sessions#destroy"

@@ -1,0 +1,29 @@
+<h1>Listing current_packages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Current line</th>
+    <th>Current speedy</th>
+    <th>Current wire</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @current_packages.each do |current_package| %>
+  <tr>
+    <td><%= current_package.name %></td>
+    <td><%= current_package.current_line %></td>
+    <td><%= current_package.current_speedy %></td>
+    <td><%= current_package.current_wire %></td>
+    <td><%= link_to 'Show', current_package %></td>
+    <td><%= link_to 'Edit', edit_current_package_path(current_package) %></td>
+    <td><%= link_to 'Destroy', current_package, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Current package', new_current_package_path %>

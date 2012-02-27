@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Management:</b>
+  <%= @temporal_management.management %>
+</p>
+
+<p>
+  <b>Date call:</b>
+  <%= @temporal_management.date_call %>
+</p>
+
+<p>
+  <b>Management status:</b>
+  <%= @temporal_management.management_status %>
+</p>
+
+<p>
+  <b>Hour call:</b>
+  <%= @temporal_management.hour_call %>
+</p>
+
+<p>
+  <b>Number call:</b>
+  <%= @temporal_management.number_call %>
+</p>
+
+
+<%= link_to 'Edit', edit_temporal_management_path(@temporal_management) %> |
+<%= link_to 'Back', temporal_managements_path %>

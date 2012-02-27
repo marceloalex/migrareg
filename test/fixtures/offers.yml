@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  clasification: MyString
+  detail: MyString
+  response: MyString
+  code_offer: MyString
+  line_destiny: MyString
+  speedy_destiny: MyString
+  wire_destiny: MyString
+  auxiliar: MyString
+
+two:
+  name: MyString
+  clasification: MyString
+  detail: MyString
+  response: MyString
+  code_offer: MyString
+  line_destiny: MyString
+  speedy_destiny: MyString
+  wire_destiny: MyString
+  auxiliar: MyString

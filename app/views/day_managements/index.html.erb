@@ -1,0 +1,27 @@
+<h1>Listing day_managements</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Number management</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @day_managements.each do |day_management| %>
+  <tr>
+    <td><%= day_management.date %></td>
+    <td><%= day_management.user %></td>
+    <td><%= day_management.number_management %></td>
+    <td><%= link_to 'Show', day_management %></td>
+    <td><%= link_to 'Edit', edit_day_management_path(day_management) %></td>
+    <td><%= link_to 'Destroy', day_management, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Day management', new_day_management_path %>

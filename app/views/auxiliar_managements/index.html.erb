@@ -1,0 +1,27 @@
+<h1>Listing auxiliar_managements</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Wallet</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @auxiliar_managements.each do |auxiliar_management| %>
+  <tr>
+    <td><%= auxiliar_management.customer %></td>
+    <td><%= auxiliar_management.wallet %></td>
+    <td><%= auxiliar_management.name %></td>
+    <td><%= link_to 'Show', auxiliar_management %></td>
+    <td><%= link_to 'Edit', edit_auxiliar_management_path(auxiliar_management) %></td>
+    <td><%= link_to 'Destroy', auxiliar_management, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Auxiliar management', new_auxiliar_management_path %>

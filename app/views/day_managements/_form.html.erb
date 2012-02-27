@@ -1,0 +1,29 @@
+<%= form_for(@day_management) do |f| %>
+  <% if @day_management.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@day_management.errors.count, "error") %> prohibited this day_management from being saved:</h2>
+
+      <ul>
+      <% @day_management.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :number_management %><br />
+    <%= f.number_field :number_management %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

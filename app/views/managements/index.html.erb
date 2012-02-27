@@ -1,0 +1,43 @@
+<h1>Listing managements</h1>
+
+<table>
+  <tr>
+    <th>Wallet</th>
+    <th>Customer</th>
+    <th>Code plan product</th>
+    <th>Money</th>
+    <th>Status</th>
+    <th>Segment</th>
+    <th>Current package</th>
+    <th>Cycle</th>
+    <th>Mark</th>
+    <th>Business</th>
+    <th>Rank</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @managements.each do |management| %>
+  <tr>
+    <td><%= management.wallet %></td>
+    <td><%= management.customer %></td>
+    <td><%= management.code_plan_product %></td>
+    <td><%= management.money %></td>
+    <td><%= management.status %></td>
+    <td><%= management.segment %></td>
+    <td><%= management.current_package %></td>
+    <td><%= management.cycle %></td>
+    <td><%= management.mark %></td>
+    <td><%= management.business %></td>
+    <td><%= management.rank %></td>
+    <td><%= link_to 'Show', management %></td>
+    <td><%= link_to 'Edit', edit_management_path(management) %></td>
+    <td><%= link_to 'Destroy', management, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Management', new_management_path %>

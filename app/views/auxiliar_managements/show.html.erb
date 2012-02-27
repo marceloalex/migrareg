@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @auxiliar_management.customer %>
+</p>
+
+<p>
+  <b>Wallet:</b>
+  <%= @auxiliar_management.wallet %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @auxiliar_management.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_auxiliar_management_path(@auxiliar_management) %> |
+<%= link_to 'Back', auxiliar_managements_path %>

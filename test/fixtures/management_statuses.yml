@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_response: MyString
+  response: MyString
+  detail_response: MyString
+  observation: MyString
+  quailification: MyString
+  contact: MyString
+  code_telephony: MyString
+  code_motive: MyString
+  status: false
+
+two:
+  type_response: MyString
+  response: MyString
+  detail_response: MyString
+  observation: MyString
+  quailification: MyString
+  contact: MyString
+  code_telephony: MyString
+  code_motive: MyString
+  status: false

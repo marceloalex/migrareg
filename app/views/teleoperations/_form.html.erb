@@ -1,0 +1,97 @@
+<%= form_for(@teleoperation) do |f| %>
+  <% if @teleoperation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teleoperation.errors.count, "error") %> prohibited this teleoperation from being saved:</h2>
+
+      <ul>
+      <% @teleoperation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number_call %><br />
+    <%= f.text_field :number_call %>
+  </div>
+  <div class="field">
+    <%= f.label :wallet %><br />
+    <%= f.text_field :wallet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :management_status %><br />
+    <%= f.text_field :management_status %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :quota %><br />
+    <%= f.text_field :quota %>
+  </div>
+  <div class="field">
+    <%= f.label :date_management %><br />
+    <%= f.datetime_select :date_management %>
+  </div>
+  <div class="field">
+    <%= f.label :hour_management %><br />
+    <%= f.datetime_select :hour_management %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br />
+    <%= f.text_field :observation %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.check_box :status %>
+  </div>
+  <div class="field">
+    <%= f.label :duration_call %><br />
+    <%= f.number_field :duration_call %>
+  </div>
+  <div class="field">
+    <%= f.label :name_responsible %><br />
+    <%= f.text_field :name_responsible %>
+  </div>
+  <div class="field">
+    <%= f.label :offer %><br />
+    <%= f.text_field :offer %>
+  </div>
+  <div class="field">
+    <%= f.label :dni %><br />
+    <%= f.text_field :dni %>
+  </div>
+  <div class="field">
+    <%= f.label :ruc %><br />
+    <%= f.text_field :ruc %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_phone %><br />
+    <%= f.text_field :reference_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship %><br />
+    <%= f.text_field :relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :ce %><br />
+    <%= f.text_field :ce %>
+  </div>
+  <div class="field">
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </div>
+  <div class="field">
+    <%= f.label :nonel %><br />
+    <%= f.text_field :nonel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

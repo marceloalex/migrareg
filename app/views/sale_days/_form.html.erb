@@ -1,0 +1,33 @@
+<%= form_for(@sale_day) do |f| %>
+  <% if @sale_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale_day.errors.count, "error") %> prohibited this sale_day from being saved:</h2>
+
+      <ul>
+      <% @sale_day.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wallet %><br />
+    <%= f.text_field :wallet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :hour %><br />
+    <%= f.datetime_select :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

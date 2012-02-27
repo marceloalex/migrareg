@@ -1,0 +1,61 @@
+<%= form_for(@management) do |f| %>
+  <% if @management.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@management.errors.count, "error") %> prohibited this management from being saved:</h2>
+
+      <ul>
+      <% @management.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wallet %><br />
+    <%= f.text_field :wallet %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :code_plan_product %><br />
+    <%= f.text_field :code_plan_product %>
+  </div>
+  <div class="field">
+    <%= f.label :money %><br />
+    <%= f.text_field :money %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.check_box :status %>
+  </div>
+  <div class="field">
+    <%= f.label :segment %><br />
+    <%= f.text_field :segment %>
+  </div>
+  <div class="field">
+    <%= f.label :current_package %><br />
+    <%= f.text_field :current_package %>
+  </div>
+  <div class="field">
+    <%= f.label :cycle %><br />
+    <%= f.text_field :cycle %>
+  </div>
+  <div class="field">
+    <%= f.label :mark %><br />
+    <%= f.text_field :mark %>
+  </div>
+  <div class="field">
+    <%= f.label :business %><br />
+    <%= f.text_field :business %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
