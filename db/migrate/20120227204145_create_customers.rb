@@ -6,9 +6,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.references :Type_customer
       t.string :email
       t.references :geoloc
-      t.string :incharge
-      t.string :plucking
-      t.string :code_customer
+      t.string :code_custom
       t.string :localc
       t.string :document
 

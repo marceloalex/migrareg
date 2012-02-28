@@ -104,8 +104,7 @@ ActiveRecord::Schema.define(:version => 20120227204951) do
     t.integer  "Type_customer_id"
     t.string   "email"
     t.integer  "geoloc_id"
-    t.string   "incharge"
-    t.string   "plucking"
+    t.string   "code_custom"
     t.string   "localc"
     t.string   "document"
     t.datetime "created_at",       :null => false
