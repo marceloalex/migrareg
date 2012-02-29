@@ -1,0 +1,4 @@
+INSERT [dbo].[businesses] ([name]) VALUES (N'MIGRA LINEAS')
+INSERT [dbo].[businesses] ([name]) VALUES (N'MIGRA SPEEDY')
+INSERT [dbo].[businesses] ([name]) VALUES (N'MIGRA PAQUETES')
+INSERT [dbo].[businesses] ([name]) VALUES (N'CONFORMACION PAQUETES')

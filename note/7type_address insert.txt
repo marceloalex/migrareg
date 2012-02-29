@@ -1,0 +1,1 @@
+INSERT [dbo].[type_addresses] ([name]) VALUES (N'DOMICILIO')

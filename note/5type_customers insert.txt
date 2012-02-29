@@ -1,0 +1,4 @@
+INSERT [dbo].[type_customers] ([name]) VALUES (N'NAT LIMA')
+INSERT [dbo].[type_customers] ([name]) VALUES (N'NAT PROV')
+INSERT [dbo].[type_customers] ([name]) VALUES (N'JUR LIMA')
+INSERT [dbo].[type_customers] ([name]) VALUES (N'JUR PROV')

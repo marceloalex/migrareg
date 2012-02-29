@@ -1,0 +1,4 @@
+INSERT [dbo].[ranks] ([name]) VALUES (N'05 - 10')
+INSERT [dbo].[ranks] ([name]) VALUES (N'11 - 20')
+INSERT [dbo].[ranks] ([name]) VALUES (N'21 - 30')
+INSERT [dbo].[ranks] ([name]) VALUES (N'31 - a mas')

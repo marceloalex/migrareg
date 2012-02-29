@@ -1,0 +1,150 @@
+agregar en el gemfile
+gem 'activerecord-sqlserver-adapter'
+gem 'tiny_tds'
+
+modificar en el config/database.yml
+development:
+  adapter: sqlserver
+  database: Equipo
+  host: maxulhe
+  username: prueba
+  password: prueba
+
+
+rails g scaffold CAMPANA idCampana:integer desCampana:string Estado:boolean
+rails g scaffold CAMPANA_GESTION IDCARTERA:string IDCLIENTE:string idCampana:integer
+rails g scaffold CAMPANA_PERSONAL idpersonal:string idCampana:integer
+rails g scaffold CARTERA IDCARTERA:string IDEMPRESA:integer FECHAINICIO:datetime FECHAFIN:datetime FECHASISTEMA:datetime ESTADO_CARTERA:boolean NOMBRE_CARTERA:string estado_visita:boolean
+rails g scaffold CITA NUM_GESTION:integer IDCARTERA:string DIA:datetime IDCLIENTE:string IDPERSONAL:string HORA:datetime NOMBRE:string TELEFONO:string
+rails g scaffold CLIENTE IDCLIENTE:string NOMBRE:string APE_PATERNO:string APE_MATERNO:string TIPO_PERSONA:string TIPO:string EMAIL:string FECHAREGISTRO:datetime ENCARGADO:string PUNTEO:string CODCLIENTE:string LOCALC:string DOCUMENTO:string CodUbigeo:string
+rails g scaffold DIRECCION DIREC:string IDCLIENTE:string TIPO_DIREC:string MOTIVO:string DISTRITO_NUEVOD:string ESTADO:boolean USUARIO:string FE_REGISTRO:datetime FE_DESHABILITADO:datetime CodUbigeo:string
+rails g scaffold ESTADOGESTION IDGESTION:string TIPO_RPTA:string RESPUESTA:string DETALLE_RPTA:string OBSERVACION:string des_cali:string CONTACTABILIDAD:string COD_TELEFONICA:string IDEMPRESA:integer Cod_motivo:string TIPO:string ESTADO:boolean grupo_0:string grupo_1:string cod_nuevo:string descripcion2:string
+rails g scaffold ESTADOPROM1 IDCODIGO:string IDEMPRESA:string CLASIF:string DETALLE:string RPTA:string DES_OFERTA:string COD_OFERTA:string LINEA_DESTINO:string SPEEDY_DESTINO:string CABLE_DESTINO:string aux:string
+rails g scaffold GESTION IDCARTERA:string IDCLIENTE:string IDPLANPRODUCTO:string MONTOTOTAL:decimal REFERENCIA:string IDPERSONAL_ASIGNADO:string MONEDA:string ESTADO_ASIGNACION:boolean ESTADO_CLIENTE:boolean ESTADO_PAGO:boolean IDRANGOD:string FE_ALTA:string ESTADOG:boolean FACT_ANTIGUA:datetime FACT_RECIENTE:datetime NUMFACTURAS:integer IDGRUPO:string SEGMENTO:string PLAN_ACTUAL:string SP_ACTUAL:string OFERTA:string PROMO1:string OFERTA2:string PROMO2:string AUXILIAR:string CICLO:string COD_OF1:string COD_OF2:string AUXILIAR2:string AUXILIAR3:decimal AUXILIAR4:decimal COD_CLI:string AUXILIAR6:string AUXILIAR5:string PAQUETE_ACTUAL:string idnegocio:integer idrango:integer
+rails g scaffold GESTIONXDIA FECHA:datetime IDPERSONAL:string NUMGESTIONES:integer CANT_ASIG:integer
+rails g scaffold GestionTemp monto:decimal fecha_llamada:datetime estado_cobranza:string hora_gestion:datetime IDCARTERA:string IDCLIENTE:string IDGESTION:string NUM_GESTION:integer
+rails g scaffold NEGOCIO idnegocio:integer negocio:string
+rails g scaffold NUM_LLAMADA NUM_GESTION:integer DES_LLAMADA:string
+rails g scaffold PAQUETEACT PAQUETE_ACTUAL:string LINEA_ACTUAL:string SPEEDY_ACTUAL:string CABLE_ACTUAL:string
+**rails g scaffold PERSONALCAMP IDPERSONAL:string NOMBRES:string IDEMPRESA:integer OBJETIVOOPER:integer ESTADOOPER:boolean VENTAS:integer VTASRESTANTES:integer FECHAGESTIONOPER:datetime
+rails g scaffold RANGO idrango:integer rango:string
+rails g scaffold TELEFONO NUMFONO:string IDCLIENTE:string TIPO_FONO:string MOTIVO:string DISTRITO_NUEVOT:string ESTADO:boolean USUARIO:string FE_REGISTRO:datetime FE_DESHABILITADO:datetime CodUbigeo:string
+rails g scaffold TELEOPERACION NUM_GESTION:integer IDCARTERA:string IDCLIENTE:string IDGESTION:string IDPERSONAL:string IDPLANPRODUCTO:string IDDIALOGO:string ACCION:string PERSONAL_CONTESTA:string ESTADO_COBRANZA:string CUOTAS:string CIPORCENTAJE:string CISOLES:decimal FECHA_GESTION:datetime HORA_GESTION:datetime GLOSA_GESTION:string ESTADO_TELEOPERACION:boolean Duracion_Llamada:integer Nombre_Decisor:string IDCODIGO:string DNI:string RUC:string TelReferencia:string Parentesco:string CE:string DOMINIO:string NONEL:string
+rails g scaffold UBIGEO CodUbigeo:string CodDpto:string CodProv:string CodDist:string Dpto:string Prov:string Nombre:string
+rails g scaffold VALIDACION Item:integer Idpersonal:string FechaVta:datetime HoraVta:datetime IdValidador:string HoraValidador:datetime ObsValidador:string EstadoValidacion:integer Flag:boolean Operacion_Comercial:string Permutacion_Linea:string Permutacion_Speedy:string Permutacion_Cable:string Linea_Origen:string Speedy_Origen:string Cable_Origen:string Linea_Destino:string Speedy_Destino:string Cable_Destino:string IDCARTERA:string IDCLIENTE:string
+rails g scaffold VENTAXDIA HORA:datetime IDPERSONAL:string IDCARTERA:string IDCLIENTE:string
+rails g scaffold VENTAXDIATOTAL HORA:datetime IDPERSONAL:string IDCARTERA:string IDCLIENTE:string VALIDACION:string GLOSA_GESTION:string IDVALIDADOR:string HORAVALIDADOR:datetime
+
+
+rails g scaffold geoloc code_geoloc:string code_departament:string code_province:string code_district:string departament:string province:string district:string
+rails g scaffold type_customer name:string
+
+rake db:migrate
+
+rails g scaffold customer code_customer:string name:string Type_customer:references email:string geoloc:references incharge:string plucking:string code_customer:string localc:string document:string
+rails g scaffold type_address name:string
+
+rake db:migrate
+
+rails g scaffold address address:string customer:references type_address:references motive:string status:boolean disable_date:datetime geoloc:references
+rails g scaffold type_phone name:string
+
+rake db:migrate
+
+rails g scaffold phone phone:string customer:references type_phone:references motive:string status:boolean disable_date:datetime geoloc:references
+rails g scaffold wallet name:string date_start:datetime date_end:datetime status:boolean
+rails g scaffold offer name:string clasification:string detail:string response:string code_offer:string line_destiny:string speedy_destiny:string wire_destiny:string auxiliar:string
+rails g scaffold management_status type_response:string response:string detail_response:string observation:string quailification:string contact:string code_telephony:string code_motive:string status:boolean
+rails g scaffold number_call number:integer name:string
+rails g scaffold rank name:string
+rails g scaffold business name:string
+rails g scaffold current_package name:string current_line:string current_speedy:string current_wire:string
+
+rake db:migrate
+
+rails g scaffold management wallet:references customer:references code_plan_product:string money:string status:boolean segment:string current_package:references cycle:string mark:string business:references rank:references
+rails g scaffold offer_customer customer:references wallet:references offer:references promotion:string
+rails g scaffold auxiliar_management customer:references wallet:references name:string
+rails g scaffold day_management date:datetime user:references number_management:integer
+
+rake db:migrate
+
+rails g scaffold temporal_management management:references date_call:datetime management_status:references hour_call:datetime number_call:references
+rails g scaffold teleoperation number_call:references wallet:references customer:references management_status:references user:references quota:string date_management:datetime hour_management:datetime observation:string status:boolean duration_call:integer name_responsible:string offer:references dni:string ruc:string reference_phone:string relationship:string ce:string domain:string nonel:string
+rails g scaffold citation management:references day:datetime user:references hour:datetime name:string phone:string
+rails g scaffold campaign name:string status:boolean
+
+rake db:migrate
+
+rails g scaffold campaign_management wallet:references customer:references campaig:references
+rails g scaffold campaign_person user:references campaign:references
+rails g scaffold validation wallet:references customer:references user:references date_sale:datetime hour_sale:datetime user_validator:string hour_validator:datetime observation:string status:integer Flag:boolean line_destiny:string speedy_destiny:string cable_destiny:string
+rails g scaffold sale_day wallet:references customer:references hour:datetime user:references
+rails g scaffold sale_day_total hour:datetime user:references wallet:references customer:references validation:string observation:string user_validator:string hour_validator:datetime
+
+rake db:migrate
+
+
+--------------------------------------
+alter table addresses add constraint df_addresses_created_at default getdate() for created_at
+alter table addresses add constraint df_addresses_updated_at default getdate() for updated_at
+alter table auxiliar_managements add constraint df_auxiliar_managements_created_at default getdate() for created_at
+alter table auxiliar_managements add constraint df_auxiliar_managements_updated_at default getdate() for updated_at
+alter table businesses add constraint df_businesses_created_at default getdate() for created_at
+alter table businesses add constraint df_businesses_updated_at default getdate() for updated_at
+alter table campaign_managements add constraint df_campaign_managements_created_at default getdate() for created_at
+alter table campaign_managements add constraint df_campaign_managements_updated_at default getdate() for updated_at
+alter table campaign_people add constraint df_campaign_people_created_at default getdate() for created_at
+alter table campaign_people add constraint df_campaign_people_updated_at default getdate() for updated_at
+alter table campaigns add constraint df_campaigns_created_at default getdate() for created_at
+alter table campaigns add constraint df_campaigns_updated_at default getdate() for updated_at
+alter table citations add constraint df_citations_created_at default getdate() for created_at
+alter table citations add constraint df_citations_updated_at default getdate() for updated_at
+alter table current_packages add constraint df_current_packages_created_at default getdate() for created_at
+alter table current_packages add constraint df_current_packages_updated_at default getdate() for updated_at
+alter table customers add constraint df_customers_created_at default getdate() for created_at
+alter table customers add constraint df_customers_updated_at default getdate() for updated_at
+alter table day_managements add constraint df_day_managements_created_at default getdate() for created_at
+alter table day_managements add constraint df_day_managements_updated_at default getdate() for updated_at
+alter table geolocs add constraint df_geolocs_created_at default getdate() for created_at
+alter table geolocs add constraint df_geolocs_updated_at default getdate() for updated_at
+alter table management_statuses add constraint df_management_statuses_created_at default getdate() for created_at
+alter table management_statuses add constraint df_management_statuses_updated_at default getdate() for updated_at
+alter table managements add constraint df_managements_created_at default getdate() for created_at
+alter table managements add constraint df_managements_updated_at default getdate() for updated_at
+alter table number_calls add constraint df_number_calls_created_at default getdate() for created_at
+alter table number_calls add constraint df_number_calls_updated_at default getdate() for updated_at
+alter table offer_customers add constraint df_offer_customers_created_at default getdate() for created_at
+alter table offer_customers add constraint df_offer_customers_updated_at default getdate() for updated_at
+alter table offers add constraint df_offers_created_at default getdate() for created_at
+alter table offers add constraint df_offers_updated_at default getdate() for updated_at
+alter table phones add constraint df_phones_created_at default getdate() for created_at
+alter table phones add constraint df_phones_updated_at default getdate() for updated_at
+alter table portals add constraint df_portals_created_at default getdate() for created_at
+alter table portals add constraint df_portals_updated_at default getdate() for updated_at
+alter table profiles add constraint df_profiles_created_at default getdate() for created_at
+alter table profiles add constraint df_profiles_updated_at default getdate() for updated_at
+alter table ranks add constraint df_ranks_created_at default getdate() for created_at
+alter table ranks add constraint df_ranks_updated_at default getdate() for updated_at
+alter table sale_day_totals add constraint df_sale_day_totals_created_at default getdate() for created_at
+alter table sale_day_totals add constraint df_sale_day_totals_updated_at default getdate() for updated_at
+alter table sale_days add constraint df_sale_days_created_at default getdate() for created_at
+alter table sale_days add constraint df_sale_days_updated_at default getdate() for updated_at
+alter table teleoperations add constraint df_teleoperations_created_at default getdate() for created_at
+alter table teleoperations add constraint df_teleoperations_updated_at default getdate() for updated_at
+alter table temporal_managements add constraint df_temporal_managements_created_at default getdate() for created_at
+alter table temporal_managements add constraint df_temporal_managements_updated_at default getdate() for updated_at
+alter table type_addresses add constraint df_type_addresses_created_at default getdate() for created_at
+alter table type_addresses add constraint df_type_addresses_updated_at default getdate() for updated_at
+alter table type_customers add constraint df_type_customers_created_at default getdate() for created_at
+alter table type_customers add constraint df_type_customers_updated_at default getdate() for updated_at
+alter table type_phones add constraint df_type_phones_created_at default getdate() for created_at
+alter table type_phones add constraint df_type_phones_updated_at default getdate() for updated_at
+alter table user_sessions add constraint df_user_sessions_created_at default getdate() for created_at
+alter table user_sessions add constraint df_user_sessions_updated_at default getdate() for updated_at
+alter table users add constraint df_users_created_at default getdate() for created_at
+alter table users add constraint df_users_updated_at default getdate() for updated_at
+alter table validations add constraint df_validations_created_at default getdate() for created_at
+alter table validations add constraint df_validations_updated_at default getdate() for updated_at
+alter table wallets add constraint df_wallets_created_at default getdate() for created_at
+alter table wallets add constraint df_wallets_updated_at default getdate() for updated_at
