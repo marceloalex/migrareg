@@ -17,12 +17,12 @@
 <% @phones.each do |phone| %>
   <tr>
     <td><%= phone.phone %></td>
-    <td><%= phone.customer %></td>
-    <td><%= phone.type_phone %></td>
+    <td><%= phone.customer.code_customer %></td>
+    <td><%= phone.type_phone.name %></td>
     <td><%= phone.motive %></td>
     <td><%= phone.status %></td>
     <td><%= phone.disable_date %></td>
-    <td><%= phone.geoloc %></td>
+    <td><%= phone.geoloc.district %></td>
     <td><%= link_to 'Show', phone %></td>
     <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
     <td><%= link_to 'Destroy', phone, confirm: 'Are you sure?', method: :delete %></td>

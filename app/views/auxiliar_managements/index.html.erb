@@ -12,8 +12,8 @@
 
 <% @auxiliar_managements.each do |auxiliar_management| %>
   <tr>
-    <td><%= auxiliar_management.customer %></td>
-    <td><%= auxiliar_management.wallet %></td>
+    <td><%= auxiliar_management.customer.code_customer %></td>
+    <td><%= auxiliar_management.wallet.name %></td>
     <td><%= auxiliar_management.name %></td>
     <td><%= link_to 'Show', auxiliar_management %></td>
     <td><%= link_to 'Edit', edit_auxiliar_management_path(auxiliar_management) %></td>

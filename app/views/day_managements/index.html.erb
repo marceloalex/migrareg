@@ -13,7 +13,7 @@
 <% @day_managements.each do |day_management| %>
   <tr>
     <td><%= day_management.date %></td>
-    <td><%= day_management.user %></td>
+    <td><%= day_management.user.username %></td>
     <td><%= day_management.number_management %></td>
     <td><%= link_to 'Show', day_management %></td>
     <td><%= link_to 'Edit', edit_day_management_path(day_management) %></td>

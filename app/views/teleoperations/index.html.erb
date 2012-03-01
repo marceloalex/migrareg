@@ -29,11 +29,11 @@
 
 <% @teleoperations.each do |teleoperation| %>
   <tr>
-    <td><%= teleoperation.number_call %></td>
-    <td><%= teleoperation.wallet %></td>
-    <td><%= teleoperation.customer %></td>
-    <td><%= teleoperation.management_status %></td>
-    <td><%= teleoperation.user %></td>
+    <td><%= teleoperation.number_call.number %></td>
+    <td><%= teleoperation.wallet.name %></td>
+    <td><%= teleoperation.customer.code_customer %></td>
+    <td><%= teleoperation.management_status.detail_response %></td>
+    <td><%= teleoperation.user.username %></td>
     <td><%= teleoperation.quota %></td>
     <td><%= teleoperation.date_management %></td>
     <td><%= teleoperation.hour_management %></td>
@@ -41,7 +41,7 @@
     <td><%= teleoperation.status %></td>
     <td><%= teleoperation.duration_call %></td>
     <td><%= teleoperation.name_responsible %></td>
-    <td><%= teleoperation.offer %></td>
+    <td><%= teleoperation.offer.name %></td>
     <td><%= teleoperation.dni %></td>
     <td><%= teleoperation.ruc %></td>
     <td><%= teleoperation.reference_phone %></td>

@@ -22,9 +22,9 @@
 
 <% @validations.each do |validation| %>
   <tr>
-    <td><%= validation.wallet %></td>
-    <td><%= validation.customer %></td>
-    <td><%= validation.user %></td>
+    <td><%= validation.wallet.name %></td>
+    <td><%= validation.customer.code_customer %></td>
+    <td><%= validation.user.username %></td>
     <td><%= validation.date_sale %></td>
     <td><%= validation.hour_sale %></td>
     <td><%= validation.user_validator %></td>

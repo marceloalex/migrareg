@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :wallet %><br />
-    <%= f.text_field :wallet %>
+	<%= f.label :wallet_id %><br />
+    <%= f.collection_select :wallet_id, Wallet.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :customer %><br />
-    <%= f.text_field :customer %>
+	<%= f.label :customer_id %><br />
+    <%= f.collection_select :customer_id, Customer.all, :id, :code_customer, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :code_plan_product %><br />
@@ -36,8 +36,8 @@
     <%= f.text_field :segment %>
   </div>
   <div class="field">
-    <%= f.label :current_package %><br />
-    <%= f.text_field :current_package %>
+	<%= f.label :current_package_id %><br />
+    <%= f.collection_select :current_package_id, Current_package.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :cycle %><br />
@@ -48,12 +48,12 @@
     <%= f.text_field :mark %>
   </div>
   <div class="field">
-    <%= f.label :business %><br />
-    <%= f.text_field :business %>
+	<%= f.label :business_id %><br />
+    <%= f.collection_select :business_id, Business.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :rank %><br />
-    <%= f.text_field :rank %>
+	<%= f.label :rank_id %><br />
+    <%= f.collection_select :rank_id, Rank.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

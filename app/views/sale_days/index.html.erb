@@ -13,10 +13,10 @@
 
 <% @sale_days.each do |sale_day| %>
   <tr>
-    <td><%= sale_day.wallet %></td>
-    <td><%= sale_day.customer %></td>
+    <td><%= sale_day.wallet.name %></td>
+    <td><%= sale_day.customer.code_customer %></td>
     <td><%= sale_day.hour %></td>
-    <td><%= sale_day.user %></td>
+    <td><%= sale_day.user.username %></td>
     <td><%= link_to 'Show', sale_day %></td>
     <td><%= link_to 'Edit', edit_sale_day_path(sale_day) %></td>
     <td><%= link_to 'Destroy', sale_day, confirm: 'Are you sure?', method: :delete %></td>

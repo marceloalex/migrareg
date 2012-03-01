@@ -21,16 +21,16 @@
 <% @managements.each do |management| %>
   <tr>
     <td><%= management.wallet %></td>
-    <td><%= management.customer %></td>
+    <td><%= management.customer.code_customer %></td>
     <td><%= management.code_plan_product %></td>
     <td><%= management.money %></td>
     <td><%= management.status %></td>
     <td><%= management.segment %></td>
-    <td><%= management.current_package %></td>
+    <td><%= management.current_package.name %></td>
     <td><%= management.cycle %></td>
     <td><%= management.mark %></td>
-    <td><%= management.business %></td>
-    <td><%= management.rank %></td>
+    <td><%= management.business.name %></td>
+    <td><%= management.rank.name %></td>
     <td><%= link_to 'Show', management %></td>
     <td><%= link_to 'Edit', edit_management_path(management) %></td>
     <td><%= link_to 'Destroy', management, confirm: 'Are you sure?', method: :delete %></td>

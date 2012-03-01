@@ -13,9 +13,9 @@
 
 <% @offer_customers.each do |offer_customer| %>
   <tr>
-    <td><%= offer_customer.customer %></td>
-    <td><%= offer_customer.wallet %></td>
-    <td><%= offer_customer.offer %></td>
+    <td><%= offer_customer.customer.code_customer %></td>
+    <td><%= offer_customer.wallet.name %></td>
+    <td><%= offer_customer.offer.name %></td>
     <td><%= offer_customer.promotion %></td>
     <td><%= link_to 'Show', offer_customer %></td>
     <td><%= link_to 'Edit', edit_offer_customer_path(offer_customer) %></td>

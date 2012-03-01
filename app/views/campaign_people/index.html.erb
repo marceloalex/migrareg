@@ -11,8 +11,8 @@
 
 <% @campaign_people.each do |campaign_person| %>
   <tr>
-    <td><%= campaign_person.user %></td>
-    <td><%= campaign_person.campaign %></td>
+    <td><%= campaign_person.user.username %></td>
+    <td><%= campaign_person.campaign.name %></td>
     <td><%= link_to 'Show', campaign_person %></td>
     <td><%= link_to 'Edit', edit_campaign_person_path(campaign_person) %></td>
     <td><%= link_to 'Destroy', campaign_person, confirm: 'Are you sure?', method: :delete %></td>

@@ -18,9 +18,9 @@
 <% @sale_day_totals.each do |sale_day_total| %>
   <tr>
     <td><%= sale_day_total.hour %></td>
-    <td><%= sale_day_total.user %></td>
-    <td><%= sale_day_total.wallet %></td>
-    <td><%= sale_day_total.customer %></td>
+    <td><%= sale_day_total.user.username %></td>
+    <td><%= sale_day_total.wallet.name %></td>
+    <td><%= sale_day_total.customer.code_customer %></td>
     <td><%= sale_day_total.validation %></td>
     <td><%= sale_day_total.observation %></td>
     <td><%= sale_day_total.user_validator %></td>

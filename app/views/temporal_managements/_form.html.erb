@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :management %><br />
-    <%= f.text_field :management %>
+	<%= f.label :management_id %><br />
+    <%= f.collection_select :management_id, Management.all, :id, :customer, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :date_call %><br />
     <%= f.datetime_select :date_call %>
   </div>
   <div class="field">
-    <%= f.label :management_status %><br />
-    <%= f.text_field :management_status %>
+	<%= f.label :management_status_id %><br />
+    <%= f.collection_select :management_status_id, Management_status.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :hour_call %><br />
     <%= f.datetime_select :hour_call %>
   </div>
   <div class="field">
-    <%= f.label :number_call %><br />
-    <%= f.text_field :number_call %>
+	<%= f.label :number_call_id %><br />
+    <%= f.collection_select :number_call_id, Number_call.all, :id, :number, :prompt => true, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -12,9 +12,9 @@
 
 <% @campaign_managements.each do |campaign_management| %>
   <tr>
-    <td><%= campaign_management.wallet %></td>
-    <td><%= campaign_management.customer %></td>
-    <td><%= campaign_management.campaig %></td>
+    <td><%= campaign_management.wallet.name %></td>
+    <td><%= campaign_management.customer.code_customer %></td>
+    <td><%= campaign_management.campaig.name %></td>
     <td><%= link_to 'Show', campaign_management %></td>
     <td><%= link_to 'Edit', edit_campaign_management_path(campaign_management) %></td>
     <td><%= link_to 'Destroy', campaign_management, confirm: 'Are you sure?', method: :delete %></td>

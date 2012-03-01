@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :wallet %><br />
-    <%= f.text_field :wallet %>
+	<%= f.label :wallet_id %><br />
+    <%= f.collection_select :wallet_id, Wallet.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :customer %><br />
-    <%= f.text_field :customer %>
+	<%= f.label :customer_id %><br />
+    <%= f.collection_select :customer_id, Customer.all, :id, :code_customer, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :campaig %><br />
-    <%= f.text_field :campaig %>
+	<%= f.label :campaig_id %><br />
+    <%= f.collection_select :campaig_id, Campaig.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

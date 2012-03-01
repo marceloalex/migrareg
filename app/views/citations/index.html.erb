@@ -15,9 +15,9 @@
 
 <% @citations.each do |citation| %>
   <tr>
-    <td><%= citation.management %></td>
+    <td><%= citation.management.customer %></td>
     <td><%= citation.day %></td>
-    <td><%= citation.user %></td>
+    <td><%= citation.user.username %></td>
     <td><%= citation.hour %></td>
     <td><%= citation.name %></td>
     <td><%= citation.phone %></td>

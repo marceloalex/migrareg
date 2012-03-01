@@ -17,12 +17,12 @@
 <% @addresses.each do |address| %>
   <tr>
     <td><%= address.address %></td>
-    <td><%= address.customer %></td>
-    <td><%= address.type_address %></td>
+    <td><%= address.customer.code_customer %></td>
+    <td><%= address.type_address.name %></td>
     <td><%= address.motive %></td>
     <td><%= address.status %></td>
     <td><%= address.disable_date %></td>
-    <td><%= address.geoloc %></td>
+    <td><%= address.geoloc.district %></td>
     <td><%= link_to 'Show', address %></td>
     <td><%= link_to 'Edit', edit_address_path(address) %></td>
     <td><%= link_to 'Destroy', address, confirm: 'Are you sure?', method: :delete %></td>

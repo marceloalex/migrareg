@@ -20,16 +20,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :Type_customer %><br />
-    <%= f.text_field :Type_customer %>
+    <%= f.label :type_customer_id %><br />
+    <%= f.collection_select :type_customer_id, Type_customer.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :geoloc %><br />
-    <%= f.text_field :geoloc %>
+	<%= f.label :geoloc_id %><br />
+    <%= f.collection_select :geoloc_id, Geoloc.all, :id, :district, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :code_custom %><br />

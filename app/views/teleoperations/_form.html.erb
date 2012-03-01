@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :number_call %><br />
-    <%= f.text_field :number_call %>
+	<%= f.label :number_call_id %><br />
+    <%= f.collection_select :number_call_id, Number_call.all, :id, :number, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :wallet %><br />
-    <%= f.text_field :wallet %>
+	<%= f.label :wallet_id %><br />
+    <%= f.collection_select :wallet_id, Wallet.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :customer %><br />
-    <%= f.text_field :customer %>
+	<%= f.label :customer_id %><br />
+    <%= f.collection_select :customer_id, Customer.all, :id, :code_customer, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :management_status %><br />
-    <%= f.text_field :management_status %>
+	<%= f.label :management_status_id %><br />
+    <%= f.collection_select :management_status_id, Management_status.all, :id, :detail_response, :prompt => true, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+	<%= f.label :user_id %><br />
+    <%= f.collection_select :user_id, User.all, :id, :username, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :quota %><br />
@@ -60,8 +60,8 @@
     <%= f.text_field :name_responsible %>
   </div>
   <div class="field">
-    <%= f.label :offer %><br />
-    <%= f.text_field :offer %>
+	<%= f.label :offer_id %><br />
+    <%= f.collection_select :offer_id, Offer.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :dni %><br />
