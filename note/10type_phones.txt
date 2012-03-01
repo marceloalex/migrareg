@@ -1,0 +1,1 @@
+INSERT [dbo].[type_phones] ([name]) VALUES (N'FIJO')
