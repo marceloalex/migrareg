@@ -21,7 +21,7 @@
   </div>
   <div class="field">
 	<%= f.label :type_address_id %><br />
-    <%= f.collection_select :type_address_id, Type_address.all, :id, :name, :prompt => true, :required => true %>
+    <%= f.collection_select :type_address_id, TypeAddress.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :motive %><br />

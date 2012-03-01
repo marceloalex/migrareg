@@ -21,7 +21,7 @@
   </div>
   <div class="field">
 	<%= f.label :campaig_id %><br />
-    <%= f.collection_select :campaig_id, Campaig.all, :id, :name, :prompt => true, :required => true %>
+    <%= f.collection_select :campaig_id, Campaign.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

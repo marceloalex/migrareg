@@ -21,7 +21,7 @@
   </div>
   <div class="field">
 	<%= f.label :type_phone_id %><br />
-    <%= f.collection_select :type_phone_id, Type_phone.all, :id, :name, :prompt => true, :required => true %>
+    <%= f.collection_select :type_phone_id, TypePhone.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :motive %><br />

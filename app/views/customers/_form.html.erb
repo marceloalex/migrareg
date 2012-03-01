@@ -20,8 +20,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :type_customer_id %><br />
-    <%= f.collection_select :type_customer_id, Type_customer.all, :id, :name, :prompt => true, :required => true %>
+    <%= f.label :Type_customer_id %><br />
+    <%= f.collection_select :Type_customer_id, TypeCustomer.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :email %><br />

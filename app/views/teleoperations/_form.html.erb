@@ -13,7 +13,7 @@
 
   <div class="field">
 	<%= f.label :number_call_id %><br />
-    <%= f.collection_select :number_call_id, Number_call.all, :id, :number, :prompt => true, :required => true %>
+    <%= f.collection_select :number_call_id, NumberCall.all, :id, :number, :prompt => true, :required => true %>
   </div>
   <div class="field">
 	<%= f.label :wallet_id %><br />
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
 	<%= f.label :management_status_id %><br />
-    <%= f.collection_select :management_status_id, Management_status.all, :id, :detail_response, :prompt => true, :required => true %>
+    <%= f.collection_select :management_status_id, ManagementStatus.all, :id, :detail_response, :prompt => true, :required => true %>
   </div>
   <div class="field">
 	<%= f.label :user_id %><br />

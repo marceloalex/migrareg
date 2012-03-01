@@ -37,7 +37,7 @@
   </div>
   <div class="field">
 	<%= f.label :current_package_id %><br />
-    <%= f.collection_select :current_package_id, Current_package.all, :id, :name, :prompt => true, :required => true %>
+    <%= f.collection_select :current_package_id, CurrentPackage.all, :id, :name, :prompt => true, :required => true %>
   </div>
   <div class="field">
     <%= f.label :cycle %><br />
