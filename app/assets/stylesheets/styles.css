@@ -1,0 +1,64 @@
+body {
+  background-color:#E8F5F7;
+}
+
+.logo {
+  position: absolute;
+  background-image: url(images/fondo.jpg);
+  background-repeat:no-repeat;
+  top:0px;
+  height:100px;
+  left:50%;
+  width:780px;
+  margin-left:-390px;
+  z-index:1;
+}
+
+.colores {
+  position: absolute;
+  top:69px;
+  left:50%;
+  width:400px;
+  margin-left:-200px;
+  z-index:2;
+}
+
+#menu {
+  position: absolute;
+  top:98px;
+  left:50%;
+  width:780px;
+  margin-left:-390px;
+}
+
+.user_nav1 {
+  position: absolute;
+  top:150px;
+  left:50%;
+  width:780px;
+  margin-left:-390px;
+  z-index:4;
+  /*float: right;*/
+  text-align:right;
+  font-size: 12px;
+}
+
+.user_nav2 {
+  position: absolute;
+  top:270px;
+  left:50%;
+  width:780px;
+  margin-left:-390px;
+  z-index:4;
+  /*float: right;*/
+  text-align:right;
+  font-size: 12px;
+}
+
+.principal {
+  position: absolute;
+  top:150px;
+  left:50%;
+  width:780px;
+  margin-left:-390px;
+}

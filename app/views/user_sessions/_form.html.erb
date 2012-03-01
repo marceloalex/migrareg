@@ -11,15 +11,24 @@
     </div>
   <% end %>
 
+<table align="center">
+<tr>
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+  <td><%= f.label :username %></td>
+  <td><%= f.text_field :username %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+  <td><%= f.label :password %></td>
+  <td><%= f.password_field :password %></td>
   </div>
+</tr>
+<tr>
   <div class="actions">
-    <%= f.submit %>
+  <td colspan="2" align="center"><%= f.submit :Ingresar %></td>
   </div>
+</tr>
+</table>
+
 <% end %>

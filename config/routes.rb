@@ -1,4 +1,8 @@
 Migrareg::Application.routes.draw do
+  root :to => "user_sessions#new"
+  
+  match "logout" => "user_sessions#destroy"
+  
   resources :sale_day_totals
 
   resources :sale_days
@@ -52,10 +56,6 @@ Migrareg::Application.routes.draw do
   resources :type_customers
 
   resources :geolocs
-
-  root :to => "portals#index"
-  
-  match "logout" => "user_sessions#destroy"
   
   resources :user_sessions
 

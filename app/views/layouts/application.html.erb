@@ -7,17 +7,158 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="user_nav">
-  <% if current_user %>
-    <%= link_to "Edit Profile", edit_user_path(:current) %> |
-    <%= link_to "Logout", logout_path %>
-  <% else %>
-    <%= link_to "Register", new_user_path %> |
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
+
+<% if current_user %>
+
+<div class="colores">
+  <ul class="colorScheme">
+    <li class="red"></li>
+    <li class="orange"></li>
+    <li class="yellow"></li>
+    <li class="green"></li>
+    <li class="blue"></li>
+    <li class="indigo"></li>
+    <li class="violet"></li>
+    <li class="grey"></li>
+  </ul>
+</div>
+<div class="logo"></div>
+
+<div id="menu" class="cssplayMenu red">
+  <ul>
+    <li><a href="<%= portals_url %>">Inicio</a></li>
+    <li><a href="#">Ventas >></a>
+      <ul>
+        <li><a href="#">VentasxDia</a>
+		  <ul>
+		    <li><a href="<%= sale_days_url %>">index</a></li>
+		  </ul>
+		</li>
+		<li><a href="#">VentasxDiaTotal</a>
+		  <ul>
+		    <li><a href="<%= sale_day_totals_url %>">index</a></li>
+		  </ul>
+		</li>
+		<li><a href="#">Validacion</a>
+		  <ul>
+		    <li><a href="<%= validations_url %>">index</a></li>
+		  </ul>
+		</li>
+      </ul>
+    </li>
+    <li><a href="#">Gestion</a>
+      <ul>
+        <li><a href="#">Gestion</a>
+          <ul>
+            <li><a href="<%= managements_url %>">index</a></li>
+			<li><a href="#">Agregados</a>
+			  <ul>
+			    <li><a href="<%= auxiliar_managements_url %>">Auxiliar</a></li>
+				<li><a href="<%= offers_url %>">Ofertas</a></li>
+				<li><a href="<%= offer_customers_url %>">Ofertas_Clientes</a></li>
+				<li><a href="<%= businesses_url %>">Negocios</a></li>
+				<li><a href="<%= current_packages_url %>">Paquetes_act</a></li>
+				<li><a href="<%= management_statuses_url %>">Estado</a></li>
+				<li><a href="<%= ranks_url %>">Rango</a></li>
+				<li><a href="<%= type_addresses_url %>">Tipo_Direccion</a></li>
+				<li><a href="<%= type_customers_url %>">Tipo_cliente</a></li>
+				<li><a href="<%= type_phones_url %>">Tipo_Telefono</a></li>
+			  </ul>
+			</li>
+          </ul>
+        </li>
+		<li><a href="#">Gestion_Temporal</a>
+		  <ul>
+		    <li><a href="<%= temporal_managements_url %>">index</a></li>
+		  </ul>
+		</li>
+        <li><a href="#">Clientes</a>
+          <ul>
+            <li><a href="<%= customers_url %>">index</a></li>
+			<li><a href="<%= geolocs_url %>">Agregados</a>
+			</li>
+          </ul>
+        </li>
+        <li><a href="#">Direccion</a>
+          <ul>
+            <li><a href="<%= addresses_url %>">index</a></li>
+          </ul>
+        </li>
+		<li><a href="#">Telefono</a>
+          <ul>
+            <li><a href="<%= phones_url %>">index</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Teleoperacion</a>
+      <ul>
+        <li><a href="#">Teleoperacion</a>
+		  <ul>
+            <li><a href="<%= teleoperations_url %>">index</a></li>
+          </ul>
+		</li>
+		<li><a href="#">Cita</a>
+		  <ul>
+            <li><a href="<%= citations_url %>">index</a></li>
+          </ul>
+		</li>
+      </ul>
+    </li>
+    <li><a href="#">Campa&ntilde;as</a>
+      <ul>
+        <li><a href="#">Campa&ntilde;a</a>
+          <ul>
+            <li><a href="<%= campaigns_url %>">index</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Campa&ntilde;a_Personal</a>
+          <ul>
+            <li><a href="<%= campaign_people_url %>">index</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Campa&ntilde;a_Gestion</a>
+		  <ul>
+            <li><a href="<%= campaign_managements_url %>">index</a></li>
+          </ul>
+		</li>
+      </ul>
+    </li>
+	<li><a href="#">Otros</a>
+	  <ul>
+	    <li><a href="<%= day_managements_url %>">Dias_Gestion</a></li>
+	    <li><a href="<%= number_calls_url %>">Numero_Llamadas</a></li>
+	    <li><a href="<%= profiles_url %>">Perfil</a></li>
+	  </ul>
+    </li>
+	<li><a href="#">Usuario</a>
+	  <ul>
+	    <li><a href="<%= users_url %>">index</a></li>
+	  </ul>
+	</li>
+  </ul>
 </div>
 
-<%= yield %>
+<div class="user_nav1">
+  Bienvenido: <%= current_user.username %> |
+  <%= link_to "Edit Profile", edit_user_path(:current) %> |
+  <%= link_to "Logout", logout_path %>
+</div>
+  
+<div class="principal">
+  <%= yield %>
+</div>
+
+<% else %>
+
+<div class="user_nav2">
+  <%= link_to "Register", new_user_path %> |
+  <%= link_to "Login", new_user_session_path %>
+</div>
+  
+ <%= yield %>
+ 
+<% end %>
 
 </body>
 </html>

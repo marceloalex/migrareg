@@ -351,9 +351,11 @@ ActiveRecord::Schema.define(:version => 20120227204951) do
     t.string   "phone"
     t.integer  "profile_id"
     t.string   "username"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   add_index "users", ["profile_id"], :name => "index_users_on_profile_id"
